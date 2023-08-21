@@ -11,6 +11,7 @@ import { useState } from "react";
 import Header from "./components/header";
 import TodoItem from "./components/todoItem";
 import AddTodo from "./components/addTodo";
+import Sandbox from "./components/sandbox";
 
 export default function App() {
   const [todos, setTodos] = useState([
@@ -40,7 +41,7 @@ export default function App() {
     }
   };
   return (
-    //to let the keyboard disappear when clicking anywhere
+    // to let the keyboard disappear when clicking anywhere
     <TouchableWithoutFeedback
       onPress={() => {
         Keyboard.dismiss();
@@ -70,12 +71,11 @@ const styles = StyleSheet.create({
     backgroundColor: "#fff",
   },
   content: {
-    flex: 1,
-    backgroundColor: "#fff",
-    margin: 35,
+    padding: 40,
+    flex: 1
   },
   list: {
     flex: 1,
-    backgroundColor: "#fff",
+    marginTop:20,
   },
 });
